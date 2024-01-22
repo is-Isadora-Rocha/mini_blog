@@ -63,7 +63,7 @@ class PostsController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    # set_posts é chamado em qualquer um dos métodos.
+    # set_posts é chamado em qualquer um dos métodos acima.
     def set_post
       @post = Post.find(params[:id])
     end
