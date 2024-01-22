@@ -1,5 +1,23 @@
 <h1>New Post</h1>
 
 <%= render 'form', post: @post %>
+<!--PARTIALS = _form.html.erb-->
 
 <%= link_to 'Back', posts_path %>
+<!--
+
+Em localhost:3000/info/rails/routes
+é exibido que "posts_path" é um Helper da página index. Ou seja,
+quando clicado em 'Back', retornará para página principal
+
+Por que posts_path e não post#index? 
+    Os Helpers são utilizados em páginas de views (html) e elementos de interface. 
+    O Controller#Action, que seria o post#index, é uma implementação das ações no controlador.
+        Essas ações são mapeadas para rotas de aquivo no config/routes.rb
+
+
+Helpers são mais relacionados à geração e manipulação de HTML e elementos visuais nas visões, 
+enquanto Controller#Action é mais relacionado à lógica que manipula as solicitações HTTP 
+associadas a rotas específicas da aplicação.
+
+-->
