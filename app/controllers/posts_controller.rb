@@ -60,6 +60,9 @@ class PostsController < ApplicationController
       format.html { redirect_to posts_url, notice: "Post was successfully destroyed." }
       format.json { head :no_content }
     end
+
+    #também usado no método set_post para ser destruido por ID
+    
   end
 
   private
@@ -75,5 +78,7 @@ class PostsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def post_params
       params.require(:post).permit(:title, :description)
+      #está sendo usado no CREATE e UPDATE
+      #Define quais dados serão inseridos e atualizados
     end
 end
