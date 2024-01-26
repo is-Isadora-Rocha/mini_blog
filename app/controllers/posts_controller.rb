@@ -12,8 +12,9 @@ class PostsController < ApplicationController
   # GET /posts/1 or /posts/1.json
   def show
     #Aqui está sendo chamado o :set_post
+    # @post = Post.find(params[:id])
   end
-
+''
   # GET /posts/new
   def new
     @post = Post.new
@@ -64,8 +65,11 @@ class PostsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     # set_posts é chamado em qualquer um dos métodos acima.
+
     def set_post
       @post = Post.find(params[:id])
+      # criando uma variável que recebe todos os Posts por id
+      # será definido automáticamente na URL
     end
 
     # Only allow a list of trusted parameters through.
