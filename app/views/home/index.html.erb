@@ -3,9 +3,9 @@
 
 <% @posts.each do |post| %>
     <% if post.description? %> <!-- exibe os quais possiem descrição -->
-    <h3> <%= post.title %> </h3> 
+    <h3> <%= link_to post.title, post %> </h3> 
     <% end %>
 <% end %>
 
 <%= link_to "Posts", posts_path %>
-<%= link_to "Volotar", root_path%>
+<%= link_to "Voltar", root_path%>
