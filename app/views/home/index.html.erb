@@ -1,0 +1,11 @@
+<h1>Bem vindo!</h1>
+<p>Find me in app/views/home/index.html.erb</p>
+
+<% @posts.each do |post| %>
+    <% if post.description? %> <!-- exibe os quais possiem descrição -->
+    <h3> <%= post.title %> </h3> 
+    <% end %>
+<% end %>
+
+<%= link_to "Posts", posts_path %>
+<%= link_to "Volotar", root_path%>
